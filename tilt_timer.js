@@ -1,4 +1,4 @@
-﻿// tilt_timer.js
+// tilt_timer.js
 
 class TiltTimer {
   constructor() {
