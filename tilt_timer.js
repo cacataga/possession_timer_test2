@@ -192,8 +192,10 @@ setInterval(() => {
 // 再読み込み確認ダイアログ
 window.addEventListener('beforeunload', (event) => {
   event.preventDefault();
-  event.returnValue = '';
+  event.returnValue = ''; // Chrome用
+  return ''; // 他のブラウザ用
 });
+
 
 // タイマーの状態をローカルストレージに保存する関数
 function saveState() {
