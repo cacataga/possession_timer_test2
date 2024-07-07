@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dual Tilt Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: white;
+    }
+    .label {
+      font-size: 20px;
+      text-align: center;
+    }
+    .timer {
+      font-size: 48px;
+      text-align: center;
+    }
+    .button {
+      font-size: 25px;
+      padding: 10px 20px;
+      margin: 10px;
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+    }
+    .input {
+      font-size: 28px;
+      width: 100px; /* 固定幅を設定 */
+      text-align: center;
+      margin: 0 10px;
+    }
+    .input-wide {
+      width: 80%;
+    }
+    .small-button {
+      font-size: 25px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="datetime" class="label"></div>
+  <div class="label">相手チーム名↓</div>
+  <input type="text" id="opponent" class="input input-wide" placeholder="">
+  <div id="timer1" class="timer">0:00.0</div>
+  <div id="timer2" class="timer">0:00.0</div>
+  <div id="percentage" class="timer">00%</div>
+  <div class="label">自チーム内野数↓</div>
+  <div class="input-container">
+    <button class="small-button" id="increaseDial1">+</button>
+    <input type="number" id="dial1" class="input" placeholder="0" value="11">
+    <button class="small-button" id="decreaseDial1">-</button>
+  </div>
+  <div class="label">相手チーム内野数↓</div>
+  <div class="input-container">
+    <button class="small-button" id="increaseDial2">+</button>
+    <input type="number" id="dial2" class="input" placeholder="0" value="11">
+    <button class="small-button" id="decreaseDial2">-</button>
+  </div>
+  <button id="start" class="button" disabled>スタート</button>
+  <button id="reset" class="button" disabled>終了</button>
+  <button id="enable" class="button">センサー有効化</button>
+
+  <script src="tilt_timer.js"></script>
+</body>
+</html>
