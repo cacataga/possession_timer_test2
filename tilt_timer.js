@@ -102,7 +102,7 @@ function checkTilt(event) {
   } else {
     timer1.stopTimer();
     timer2.stopTimer();
-    document.body.style.backgroundColor = 'white';
+    document.body.style.backgroundColor = 'yellow';
   }
 
   updateTimerLabels();
